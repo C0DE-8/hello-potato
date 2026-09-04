@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { Phone, Video } from 'lucide-react'
 import Avatar from '../../components/Avatar/Avatar'
 import './CallsPage.css'
 
-function CallsPage({ calls }) {
+function CallsPage({ calls, onSelectChat, onOpenFlow }) {
+  const [filter, setFilter] = useState('All')
+  const visibleCalls = filter === 'Missed' ? calls.filter((call) => call.type === 'Missed') : calls
+
   return (
     <main className="stack-page">
       <header className="page-header">
@@ -12,11 +16,19 @@ function CallsPage({ calls }) {
         </button>
       </header>
       <div className="segmented">
-        <button className="is-active" type="button">All</button>
-        <button type="button">Missed</button>
+        {['All', 'Missed'].map((label) => (
+          <button
+            className={filter === label ? 'is-active' : ''}
+            key={label}
+            type="button"
+            onClick={() => setFilter(label)}
+          >
+            {label}
+          </button>
+        ))}
       </div>
       <div className="list-card">
-        {calls.map((call) => (
+        {visibleCalls.map((call) => (
           <article className="call-row" key={call.id}>
             <Avatar src={call.contact.avatar} name={call.contact.name} />
             <span>
@@ -25,11 +37,19 @@ function CallsPage({ calls }) {
                 {call.type} · {call.time}
               </small>
             </span>
-            <button type="button" aria-label={`${call.video ? 'Video' : 'Voice'} call ${call.contact.name}`}>
+            <button
+              type="button"
+              aria-label={`${call.video ? 'Video' : 'Voice'} call ${call.contact.name}`}
+              onClick={() => {
+                onSelectChat(call.contact.id)
+                onOpenFlow({ type: call.video ? 'video-call' : 'voice-call' })
+              }}
+            >
               {call.video ? <Video size={18} /> : <Phone size={18} />}
             </button>
           </article>
         ))}
+        {visibleCalls.length === 0 && <p className="empty-state">No {filter.toLowerCase()} calls yet.</p>}
       </div>
     </main>
   )

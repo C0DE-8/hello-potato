@@ -77,10 +77,12 @@ export const messages = [
 ]
 
 export const stories = [
-  { id: 'mine', name: 'My Story', avatar: currentUser.avatar, age: 'Add story', active: true },
-  { id: 'jenny', name: 'Jenny', avatar: contacts[0].avatar, age: '2 minutes ago', active: true },
-  { id: 'bestie', name: 'Bestie 💛', avatar: contacts[2].avatar, age: '12 minutes ago', active: true },
-  { id: 'mum', name: 'Mum', avatar: contacts[4].avatar, age: 'Today, 8:12 AM', active: false },
+  { id: 'mine', name: 'My Story', avatar: currentUser.avatar, age: 'Add story', active: true, viewed: false },
+  { id: 'jenny', name: 'Jenny', avatar: contacts[0].avatar, age: '2 minutes ago', active: true, viewed: false },
+  { id: 'bestie', name: 'Bestie 💛', avatar: contacts[2].avatar, age: '12 minutes ago', active: true, viewed: false },
+  { id: 'classmates', name: 'Classmates', avatar: contacts[3].avatar, age: '1 hour ago', active: true, viewed: false },
+  { id: 'mum', name: 'Mum', avatar: contacts[4].avatar, age: 'Today, 8:12 AM', active: false, viewed: true },
+  { id: 'team', name: 'Hellopotato Team', avatar: contacts[5].avatar, age: 'Yesterday', active: false, viewed: true },
 ]
 
 export const calls = [

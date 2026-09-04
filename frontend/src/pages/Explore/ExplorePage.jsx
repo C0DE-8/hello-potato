@@ -1,13 +1,12 @@
-import { Bookmark, MessageSquare, MonitorUp, Phone, UsersRound } from 'lucide-react'
+import { Bookmark, MessageSquare, Search, UsersRound } from 'lucide-react'
 import BrandMark from '../../components/BrandMark/BrandMark'
 import './ExplorePage.css'
 
 const actions = [
-  { label: 'Voice Call', copy: 'Crystal clear audio', icon: Phone },
+  { label: 'Find People', copy: 'Discover new friends', icon: Search },
   { label: 'Create Community', copy: 'Bring people together', icon: UsersRound },
   { label: 'Channels', copy: 'Follow updates', icon: MessageSquare },
   { label: 'Saved Messages', copy: 'Keep what matters', icon: Bookmark },
-  { label: 'Share Screen', copy: 'Show what you are doing', icon: MonitorUp },
 ]
 
 function ExplorePage() {

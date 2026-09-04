@@ -5,7 +5,7 @@ import './ChatList.css'
 
 const filters = ['All', 'Unread', 'Groups', 'Favorites']
 
-function ChatList({ chats, activeChatId, onSelectChat }) {
+function ChatList({ chats, activeChatId, onSelectChat, onOpenFlow }) {
   return (
     <section className="chat-list">
       <header className="chat-list__header">
@@ -14,7 +14,7 @@ function ChatList({ chats, activeChatId, onSelectChat }) {
           <button type="button" aria-label="Search">
             <Search size={18} />
           </button>
-          <button type="button" aria-label="New chat">
+          <button type="button" aria-label="New chat" onClick={() => onOpenFlow({ type: 'new-chat' })}>
             <Edit size={18} />
           </button>
         </div>
@@ -59,7 +59,12 @@ function ChatList({ chats, activeChatId, onSelectChat }) {
         ))}
       </div>
 
-      <button className="floating-action" type="button" aria-label="Start new chat">
+      <button
+        className="floating-action"
+        type="button"
+        aria-label="Start new chat"
+        onClick={() => onOpenFlow({ type: 'new-chat' })}
+      >
         <Plus size={24} />
       </button>
     </section>

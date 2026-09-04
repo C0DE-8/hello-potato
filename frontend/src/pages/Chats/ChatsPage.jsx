@@ -3,7 +3,7 @@ import ChatList from '../../components/ChatList/ChatList'
 import ChatWindow from '../../components/ChatWindow/ChatWindow'
 import './ChatsPage.css'
 
-function ChatsPage({ chats, messages, activeChatId, onSelectChat }) {
+function ChatsPage({ chats, messages, activeChatId, onSelectChat, onOpenFlow }) {
   const activeChat = chats.find((chat) => chat.id === activeChatId) ?? chats[0]
   const [isChatOpen, setIsChatOpen] = useState(false)
 
@@ -18,8 +18,18 @@ function ChatsPage({ chats, messages, activeChatId, onSelectChat }) {
 
   return (
     <main className={`chats-page ${isChatOpen ? 'is-chat-open' : ''}`}>
-      <ChatList chats={chats} activeChatId={activeChat.id} onSelectChat={handleSelectChat} />
-      <ChatWindow chat={activeChat} messages={messages} onBack={() => setIsChatOpen(false)} />
+      <ChatList
+        chats={chats}
+        activeChatId={activeChat.id}
+        onSelectChat={handleSelectChat}
+        onOpenFlow={onOpenFlow}
+      />
+      <ChatWindow
+        chat={activeChat}
+        messages={messages}
+        onBack={() => setIsChatOpen(false)}
+        onOpenFlow={onOpenFlow}
+      />
     </main>
   )
 }

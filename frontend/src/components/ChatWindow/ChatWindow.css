@@ -29,6 +29,17 @@
   cursor: pointer;
 }
 
+.chat-window__profile,
+.chat-window__title {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
 .chat-window__header strong,
 .chat-window__header span {
   display: block;

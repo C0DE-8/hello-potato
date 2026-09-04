@@ -3,23 +3,25 @@ import Avatar from '../Avatar/Avatar'
 import Composer from '../Composer/Composer'
 import './ChatWindow.css'
 
-function ChatWindow({ chat, messages, onBack }) {
+function ChatWindow({ chat, messages, onBack, onOpenFlow }) {
   return (
     <section className="chat-window">
       <header className="chat-window__header">
         <button className="chat-window__back" type="button" onClick={onBack} aria-label="Back to chats">
           <ArrowLeft size={19} />
         </button>
-        <Avatar src={chat.avatar} name={chat.name} size="sm" />
-        <div>
+        <button className="chat-window__profile" type="button" onClick={() => onOpenFlow({ type: 'contact' })}>
+          <Avatar src={chat.avatar} name={chat.name} size="sm" />
+        </button>
+        <button className="chat-window__title" type="button" onClick={() => onOpenFlow({ type: 'contact' })}>
           <strong>{chat.name}</strong>
           <span>{chat.status}</span>
-        </div>
+        </button>
         <div className="chat-window__actions">
-          <button type="button" aria-label="Voice call">
+          <button type="button" aria-label="Voice call" onClick={() => onOpenFlow({ type: 'voice-call' })}>
             <Phone size={18} />
           </button>
-          <button type="button" aria-label="Video call">
+          <button type="button" aria-label="Video call" onClick={() => onOpenFlow({ type: 'video-call' })}>
             <Video size={18} />
           </button>
           <button type="button" aria-label="More">

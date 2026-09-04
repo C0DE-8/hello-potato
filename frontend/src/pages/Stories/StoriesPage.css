@@ -1,17 +1,32 @@
 .story-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
   gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
-.story-strip article {
-  min-width: 0;
+.story-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.story-card {
+  width: 78px;
+  min-width: 78px;
   display: grid;
   justify-items: center;
   gap: 7px;
+  position: relative;
   padding: 12px 6px;
+  border: 0;
   border-radius: 12px;
+  color: inherit;
   background: var(--surface-2);
+  scroll-snap-align: start;
+  cursor: pointer;
 }
 
 .story-strip strong {
@@ -21,6 +36,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.story-card__plus {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 13px;
+  top: 42px;
+  border: 2px solid var(--surface-2);
+  border-radius: 999px;
+  color: #05251f;
+  background: var(--accent);
 }
 
 .story-row {
@@ -42,4 +71,8 @@
 
 .story-row small {
   color: var(--text-soft);
+}
+
+.story-row--viewed {
+  opacity: 0.68;
 }

@@ -47,10 +47,6 @@
   text-align: left;
 }
 
-.action-grid button:last-child {
-  grid-column: 1 / -1;
-}
-
 .action-grid svg {
   color: var(--accent);
 }

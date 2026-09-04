@@ -9,19 +9,25 @@
 - [x] Profile setup with avatar, name, and short status.
 
 ## Main Tabs
-- [ ] Chats: search, filters, archived row, unread badges, floating new chat action.
-- [ ] Chat screen: contact header, message bubbles, voice note, media preview, composer.
-- [ ] Stories/Status: add story, my story, recent updates, viewed updates.
-- [ ] Calls: all/missed filter, voice/video actions, missed/outgoing labels.
-- [ ] Explore/More: find people, create community, channels, saved messages.
-- [ ] Settings: profile summary, account, privacy, chats, notifications, storage, appearance, help.
+- [x] Chats: search, filters, archived row, unread badges, floating new chat action.
+- [x] Chat screen: contact header, message bubbles, voice note, media preview, composer.
+- [x] Stories/Status: add story, my story, recent updates, viewed updates.
+- [x] Calls: all/missed filter, voice/video actions, missed/outgoing labels.
+- [x] Explore/More: find people, create community, channels, saved messages.
+- [x] Settings: profile summary, account, privacy, chats, notifications, storage, appearance, help.
 
 ## Detail Flows
-- [ ] Contact info with message/call/video actions.
-- [ ] New chat and new group member selection.
-- [ ] Voice call screen.
-- [ ] Video call screen.
-- [ ] Appearance settings with light/dark/system and accent color.
+- [x] Contact info with message/call/video actions.
+- [x] New chat and new group member selection.
+- [x] Voice call screen.
+- [x] Video call screen.
+- [x] Appearance settings with light/dark/system and accent color.
+- [x] Add story screen from the first story item.
+- [x] Account settings detail.
+- [x] Privacy settings detail.
+- [x] Chat settings detail.
+- [x] Notification settings detail.
+- [x] Storage, Help, and Invite detail screens.
 
 ## Frontend Build Order
 - [x] Create organized folders: `api`, `components`, `data`, `pages`, `styles`, `assets`.

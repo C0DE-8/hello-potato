@@ -38,3 +38,10 @@
   color: var(--accent);
   background: var(--surface-3);
 }
+
+.empty-state {
+  margin: 0;
+  padding: 22px 14px;
+  color: var(--text-soft);
+  text-align: center;
+}
