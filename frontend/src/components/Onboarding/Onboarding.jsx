@@ -1,6 +1,7 @@
 import { ArrowLeft, Camera, Check, UserRound } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import BrandMark from '../BrandMark/BrandMark'
+import potatoBubble from '../../assets/brand/potato-bubble.png'
+import potatoWelcome from '../../assets/brand/potato-welcome.png'
 import './Onboarding.css'
 
 function Onboarding({ onComplete }) {
@@ -28,9 +29,7 @@ function Onboarding({ onComplete }) {
   if (step === 'splash') {
     return (
       <main className="entry-screen entry-screen--splash">
-        <div className="entry-logo entry-logo--large">
-          <BrandMark compact />
-        </div>
+        <img className="entry-logo entry-logo--large" src={potatoBubble} alt="Hellopotato" />
         <section className="entry-copy">
           <h1>Hellopotato</h1>
           <p>Chat More. Be You.</p>
@@ -46,16 +45,12 @@ function Onboarding({ onComplete }) {
   if (step === 'welcome') {
     return (
       <main className="entry-screen entry-screen--welcome">
-        <div className="entry-logo">
-          <BrandMark compact />
-        </div>
+        <img className="entry-logo" src={potatoBubble} alt="Hellopotato" />
         <section className="entry-copy">
           <h1>Hellopotato</h1>
           <p>More than chat. Messages, calls, stories and real connections in one friendly space.</p>
         </section>
-        <div className="entry-mascot">
-          <BrandMark compact />
-        </div>
+        <img className="entry-mascot" src={potatoWelcome} alt="" />
         <div className="entry-dots" aria-hidden="true">
           <span className="is-active" />
           <span />
@@ -63,9 +58,6 @@ function Onboarding({ onComplete }) {
         </div>
         <button className="entry-primary" type="button" onClick={() => setStep('phone')}>
           Get Started
-        </button>
-        <button className="entry-link" type="button" onClick={() => setStep('phone')}>
-          I already have an account
         </button>
       </main>
     )
@@ -75,9 +67,7 @@ function Onboarding({ onComplete }) {
     return (
       <main className="entry-screen">
         <BackButton onBack={goBack} />
-        <div className="entry-logo entry-logo--small">
-          <BrandMark compact />
-        </div>
+        <img className="entry-logo entry-logo--small" src={potatoBubble} alt="Hellopotato" />
         <section className="entry-copy">
           <h1>Enter Your Number</h1>
           <p>We&apos;ll send a verification code to this number.</p>
@@ -100,9 +90,7 @@ function Onboarding({ onComplete }) {
     return (
       <main className="entry-screen">
         <BackButton onBack={goBack} />
-        <div className="entry-logo entry-logo--small">
-          <BrandMark compact />
-        </div>
+        <img className="entry-logo entry-logo--small" src={potatoBubble} alt="Hellopotato" />
         <section className="entry-copy">
           <h1>Verify Your Number</h1>
           <p>We&apos;ve sent a 6-digit code to +234 801 234 5678</p>
@@ -124,15 +112,13 @@ function Onboarding({ onComplete }) {
   return (
     <main className="entry-screen">
       <BackButton onBack={goBack} />
-      <div className="entry-logo entry-logo--small">
-        <BrandMark compact />
-      </div>
+      <img className="entry-logo entry-logo--small" src={potatoBubble} alt="Hellopotato" />
       <section className="entry-copy">
         <h1>Complete Your Profile</h1>
         <p>Add a name and photo so friends can recognize you.</p>
       </section>
       <div className="profile-photo">
-        <BrandMark compact />
+        <img src={potatoBubble} alt="Profile preview" />
         <button type="button" aria-label="Add profile photo">
           <Camera size={16} />
         </button>
@@ -165,12 +151,11 @@ function BackButton({ onBack }) {
   )
 }
 
-function Field({ icon: Icon, trailingIcon: TrailingIcon, label, ...inputProps }) {
+function Field({ icon: Icon, label, ...inputProps }) {
   return (
     <label className="entry-field">
       <Icon size={17} />
       <input placeholder={label} aria-label={label} {...inputProps} />
-      {TrailingIcon && <TrailingIcon size={17} />}
     </label>
   )
 }

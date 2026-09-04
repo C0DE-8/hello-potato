@@ -22,42 +22,20 @@
 }
 
 .entry-logo {
-  display: grid;
-  place-items: center;
   width: 112px;
   height: 112px;
-  border-radius: 34px;
-  box-shadow: var(--glow);
-}
-
-.entry-logo .brand-mark img {
-  width: 86px;
-  height: 86px;
-  border-radius: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px rgba(53, 246, 171, 0.38));
 }
 
 .entry-logo--large {
   width: 162px;
   height: 162px;
-  border-radius: 46px;
-}
-
-.entry-logo--large .brand-mark img {
-  width: 132px;
-  height: 132px;
-  border-radius: 42px;
 }
 
 .entry-logo--small {
   width: 78px;
   height: 78px;
-  border-radius: 24px;
-}
-
-.entry-logo--small .brand-mark img {
-  width: 58px;
-  height: 58px;
-  border-radius: 20px;
 }
 
 .entry-copy {
@@ -100,19 +78,6 @@
   box-shadow: var(--glow);
 }
 
-.entry-link,
-.entry-forgot,
-.entry-bottom button {
-  border: 0;
-  color: var(--accent);
-  background: transparent;
-  cursor: pointer;
-}
-
-.entry-link {
-  color: var(--text-soft);
-}
-
 .entry-back {
   width: 38px;
   height: 38px;
@@ -146,18 +111,11 @@
 }
 
 .entry-mascot {
-  display: grid;
-  place-items: center;
-  width: 178px;
+  width: min(100%, 238px);
   height: 178px;
   margin: 6px 0 4px;
-}
-
-.entry-mascot .brand-mark img {
-  width: 168px;
-  height: 168px;
-  border-radius: 52px;
-  box-shadow: none;
+  object-fit: contain;
+  border-radius: 24px;
 }
 
 .entry-dots {
@@ -219,45 +177,6 @@
   font-size: 13px;
 }
 
-.entry-forgot {
-  justify-self: end;
-  font-size: 12px;
-}
-
-.entry-divider {
-  width: min(100%, 290px);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 12px;
-  align-items: center;
-  color: var(--text-soft);
-  font-size: 12px;
-}
-
-.entry-divider::before,
-.entry-divider::after {
-  content: '';
-  height: 1px;
-  background: var(--line);
-}
-
-.social-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  width: min(100%, 210px);
-}
-
-.social-row button {
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  color: var(--text-strong);
-  background: var(--surface-2);
-}
-
 .number-pad {
   width: min(100%, 310px);
   display: grid;
@@ -300,10 +219,12 @@
   place-items: center;
 }
 
-.profile-photo .brand-mark img {
+.profile-photo img {
   width: 108px;
   height: 108px;
   border-radius: 999px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(53, 246, 171, 0.28));
 }
 
 .profile-photo button {

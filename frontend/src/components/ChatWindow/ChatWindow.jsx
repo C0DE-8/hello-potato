@@ -1,12 +1,15 @@
-import { MoreVertical, Phone, Video } from 'lucide-react'
+import { ArrowLeft, MoreVertical, Phone, Video } from 'lucide-react'
 import Avatar from '../Avatar/Avatar'
 import Composer from '../Composer/Composer'
 import './ChatWindow.css'
 
-function ChatWindow({ chat, messages }) {
+function ChatWindow({ chat, messages, onBack }) {
   return (
     <section className="chat-window">
       <header className="chat-window__header">
+        <button className="chat-window__back" type="button" onClick={onBack} aria-label="Back to chats">
+          <ArrowLeft size={19} />
+        </button>
         <Avatar src={chat.avatar} name={chat.name} size="sm" />
         <div>
           <strong>{chat.name}</strong>

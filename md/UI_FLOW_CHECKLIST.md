@@ -2,8 +2,8 @@
 
 ## App Entry
 - [x] Splash screen with logo, tagline, progress hint.
-- [x] Welcome carousel with "Get Started" and "I already have an account".
-- [x] Phone-only sign in/sign up entry, no email or password.
+- [x] Welcome screen with one "Get Started" action.
+- [x] Phone-only entry, no email or password.
 - [x] Phone number entry with country selector.
 - [x] OTP verification with resend timer.
 - [x] Profile setup with avatar, name, and short status.

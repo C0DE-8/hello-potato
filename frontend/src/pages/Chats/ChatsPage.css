@@ -4,12 +4,25 @@
   grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
 }
 
+.chats-page--loading {
+  place-items: center;
+  color: var(--text-soft);
+}
+
 @media (max-width: 820px) {
   .chats-page {
     grid-template-columns: 1fr;
   }
 
+  .chats-page.is-chat-open .chat-list {
+    display: none;
+  }
+
   .chats-page .chat-window {
     display: none;
+  }
+
+  .chats-page.is-chat-open .chat-window {
+    display: grid;
   }
 }

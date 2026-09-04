@@ -17,6 +17,18 @@
   background: rgba(3, 18, 20, 0.95);
 }
 
+.chat-window__back {
+  display: none;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text-strong);
+  background: transparent;
+  cursor: pointer;
+}
+
 .chat-window__header strong,
 .chat-window__header span {
   display: block;
@@ -50,6 +62,16 @@
   color: var(--accent);
   background: transparent;
   cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  .chat-window__header {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+  }
+
+  .chat-window__back {
+    display: grid;
+  }
 }
 
 .message-stack {

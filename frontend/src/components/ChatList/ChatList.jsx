@@ -33,6 +33,11 @@ function ChatList({ chats, activeChatId, onSelectChat }) {
         ))}
       </div>
 
+      <button className="archive-row" type="button">
+        <Archive size={18} />
+        Archived
+      </button>
+
       <div className="chat-list__items">
         {chats.map((chat) => (
           <button
@@ -53,11 +58,6 @@ function ChatList({ chats, activeChatId, onSelectChat }) {
           </button>
         ))}
       </div>
-
-      <button className="archive-row" type="button">
-        <Archive size={18} />
-        Archived
-      </button>
 
       <button className="floating-action" type="button" aria-label="Start new chat">
         <Plus size={24} />
