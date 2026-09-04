@@ -1,0 +1,37 @@
+.composer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(3, 18, 20, 0.95);
+  border-top: 1px solid var(--line);
+}
+
+.composer button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--surface-2);
+  cursor: pointer;
+}
+
+.composer input {
+  min-width: 0;
+  height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  outline: 0;
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.composer .composer__send {
+  color: #05251f;
+  background: var(--accent);
+}

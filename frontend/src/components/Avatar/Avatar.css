@@ -1,0 +1,35 @@
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar--sm {
+  width: 34px;
+  height: 34px;
+}
+
+.avatar--md {
+  width: 46px;
+  height: 46px;
+}
+
+.avatar--lg {
+  width: 78px;
+  height: 78px;
+}
+
+.avatar--active {
+  padding: 2px;
+  background: linear-gradient(135deg, var(--accent), var(--teal));
+}

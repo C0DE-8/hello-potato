@@ -1,0 +1,21 @@
+.app-shell {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(53, 246, 171, 0.14), transparent 30%),
+    linear-gradient(135deg, #071112, #030809 48%, #0c1818);
+}
+
+.app-shell__content {
+  min-height: 0;
+  display: grid;
+  overflow: hidden;
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    padding: 0;
+  }
+}

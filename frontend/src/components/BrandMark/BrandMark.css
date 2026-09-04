@@ -1,0 +1,24 @@
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-strong);
+  font-weight: 800;
+}
+
+.brand-mark img {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--glow);
+}
+
+.brand-mark span {
+  color: var(--text-strong);
+}
+
+.brand-mark--compact img {
+  width: 44px;
+  height: 44px;
+}

@@ -1,0 +1,45 @@
+.story-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.story-strip article {
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 12px 6px;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.story-strip strong {
+  max-width: 100%;
+  color: var(--text-strong);
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.story-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
+  padding: 12px;
+}
+
+.story-row strong,
+.story-row small {
+  display: block;
+}
+
+.story-row strong {
+  color: var(--text-strong);
+}
+
+.story-row small {
+  color: var(--text-soft);
+}
